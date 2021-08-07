@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Normalized.css">
+    
+    <link rel="stylesheet" href="CSS/Master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="landing-page">
+
+        <div class="overlay" >
+
+<h1>Robot Enigne Control Panel</h1>
+
+<div class="slidecontainer">
+    <p>First Enigne : </p>
+    <input type="range" min="0" max="180" value="" class="slider" id="FirstRange">
+    <p class="myvalue">  Value: <span id="demo"></span></p>
+</div>
+
+
+<div class="slidecontainer">
+  <p>Second Enigne :</p>
+  <input type="range" min="0" max="180" value="" class="slider" id="SecondRange">
+  <p class="myvalue">Value: <span id="seconddemo"></span></p>
+</div>
+
+<div class="slidecontainer">
+  <p>Third Enigne : </p>
+  <input type="range" min="0" max="180" value="" class="slider" id="ThirdRange">
+  <p class="myvalue">  Value: <span id="Thirddemo"></span></p>
+</div>
+
+<div class="slidecontainer">
+  <p>Fourth Engine : </p>
+  <input type="range" min="0" max="180" value="" class="slider" id="FourthRange">
+  <p class="myvalue">Value: <span id="Fourthdemo"></span></p>
+</div>
+
+
+<div class="slidecontainer">
+  <p>Fifth Enigne : </p>
+  <input type="range" min="0" max="180" value="" class="slider" id="FifthRange">
+  <p class="myvalue">  Value: <span id="Fifthdemo"></span></p>
+</div>
+
+
+<div class="slidecontainer">
+  <p> Sixth Enigne : </p>
+  <input type="range" min="0" max="180" value="" class="slider" id="LastRange">
+  <p class="myvalue">Value: <span id="Lastdemo"></span></p>
+</div>
+
+
+<div id="btn">
+
+    <button type="button"> </i> Save</button> 
+
+    <button type="button" > </i> Run </button> 
+    <button onclick="window.location.href='BaseControler.html'" >Go To Robot Base Control Panel</button>
+</div>
+
+        </div>
+        </div>
+        
+
+
+
+        <script>
+
+            var FirstSliderRange = document.getElementById("FirstRange");
+            var Firstoutput = document.getElementById("demo");
+            Firstoutput.innerHTML = FirstSliderRange.value;
+            
+            FirstSliderRange.oninput = function() {
+              Firstoutput.innerHTML = this.value;
+            }
+        
+
+            var SecondSliderRange = document.getElementById("SecondRange");
+                var Secondoutput = document.getElementById("seconddemo");
+                Secondoutput.innerHTML = SecondSliderRange.value;
+                
+                SecondSliderRange.oninput = function() {
+                  Secondoutput.innerHTML = this.value;
+                }
+
+            
+                    var ThirdSliderRange = document.getElementById("ThirdRange");
+                    var Thirdoutput = document.getElementById("Thirddemo");
+                    Thirdoutput.innerHTML = ThirdSliderRange.value;
+                    
+                    ThirdSliderRange.oninput = function() {
+                        Thirdoutput.innerHTML = this.value;
+                    }
+
+
+
+
+                
+    var FourthSliderRange = document.getElementById("FourthRange");
+    var Fourthoutput = document.getElementById("Fourthdemo");
+    Fourthoutput.innerHTML = FourthSliderRange.value;
+  
+    FourthSliderRange.oninput = function() {
+    Fourthoutput.innerHTML = this.value;
+        }
+
+
+
+
+    var FifthSliderRange = document.getElementById("FifthRange");
+          var Fifthoutput = document.getElementById("Fifthdemo");
+          Fifthoutput.innerHTML = FifthSliderRange.value;
+          
+          FifthSliderRange.oninput = function() {
+            Fifthoutput.innerHTML = this.value;
+          }
+        
+            var LastSliderRange = document.getElementById("LastRange");
+                  var Lastoutput = document.getElementById("Lastdemo");
+                  Lastoutput.innerHTML = LastSliderRange.value;
+                  
+                  LastSliderRange.oninput = function() {
+                    Lastoutput.innerHTML = this.value;
+                  }
+                  </script>
+
+                  <script>
+                    window.watsonAssistantChatOptions = {
+                        integrationID: "dde45fac-807b-4d0b-869f-ea0a66405c2f", // The ID of this integration.
+                        region: "eu-gb", // The region your integration is hosted in.
+                        serviceInstanceID: "c4450f4d-34bd-4df2-add9-8d24a25824fa", // The ID of your service instance.
+                        onLoad: function(instance) { instance.render(); }
+                      };
+                    setTimeout(function(){
+                      const t=document.createElement('script');
+                      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+                      document.head.appendChild(t);
+                    });
+                  </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

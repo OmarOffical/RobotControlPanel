@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Normalized.css">
+    
+    <link rel="stylesheet" href="CSS/Master.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+
+
+    <title>Document</title>
+</head>
+<body>
+  <div class="landing-page">
+
+    <div class="overlay" >
+    
+    
+    <h1 class="Head">This Is My Robot Base Control Panel</h1> 
+
+<div id="container">
+
+    <button id="F">Forward</button>
+
+
+
+    <button id="L">Left</button>  
+    <button id="Stop">Stop</button> 
+    <button id="R">Right</button>
+
+
+
+    <button id="B">BackWard</button>
+    <button onclick="window.location.href='ArmControler.html'" id="Another">Go To Robot Arm Control Panel</button>
+  </div>
+  
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "dde45fac-807b-4d0b-869f-ea0a66405c2f", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "c4450f4d-34bd-4df2-add9-8d24a25824fa", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    });
+  </script>
+
+
+<script>
+ 
+var Forward =0;
+var Left =0;
+var Right=0;
+var Backward =0;
+
+document.getElementById("F").onclick = function() {ForwardF()};
+document.getElementById("L").onclick = function() {ForwardL()};
+document.getElementById("R").onclick = function() {ForwardR()};
+document.getElementById("B").onclick = function() {ForwardB()};
+document.getElementById("Stop").onclick = function() {Stop()};
+
+function ForwardF(){
+
+  ++Forward
+}
+
+
+function ForwardL(){
+
+++Left
+}
+
+function ForwardR(){
+
+++Right
+}
+
+function ForwardB(){
+
+++Backward
+}
+function Stop(){
+    Forward =0;
+    Left =0;
+    Right=0;
+    Backward =0;
+
+}
+
+</script>
+
+
+
+
+
+</body>
+</html>
